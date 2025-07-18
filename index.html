@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rapma FM | Rapmafest #12</title>
+<link rel="icon" type="image/x-icon" href="img/rapmafest12-removebg-preview.png" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet" />
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<!-- CSS Eksternal -->
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Section: Hero Background -->
+<section class="hero-section" id="getready">
+  <div class="overlay"></div>
+  <header class="header-container">
+    <div class="logo"></div>
+    <nav class="nav-menu"><ul></ul></nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+  <div class="banner-content">
+    <h1></h1>
+    <p class="logo-image-container">
+      <img src="" alt="" class="banner-comingsoon" />
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section 2: About Us -->
+<section class="section-about" id="about">
+  <div class="about-container">
+    <h2>ABOUT US</h2>
+    <p>Rapmafest merupakan event terbesar dari Rapma FM dengan berbagai macam serangkaian acara di dalamnya. Acara ini merupakan perayaan hari jadi Rapma FM yang dilaksanakan setiap tahunnya. Pada tahun ini kami mempersembahkan RAPMAFEST #12 “Tune The Vibes” dengan wajah baru yang tak kalah seru dari tahun sebelumnya. Tentunya akan ada pelaksanaan Lomba Voice Over dan Announcer. Selain itu juga akan ada webinar tentang bagaimana konten dibuat melalui public speaking dan skill yang dimiliki. Dan akan ditutup dengan GIGS yang super asik tentunya. Dimana serangkaian acara ini akan menyemarakkan RAPMAFEST #12 dengan berbagai keseruannya</p>
+    <div class="about-floating-images"></div>
+
+   <!-- Container utama untuk posisi tengah -->
+<div class="div-container" style="display:flex; align-items:center; justify-content:center; flex-wrap:wrap;">
+  <!-- Bagian untuk thumbnail -->
+  <div class="div-section-video" style="flex:1 1 300px; max-width:400px; margin:10px;">
+    <h2></h2>
+    <!-- Thumbnail gambar -->
+    <div class="div-thumbnail" 
+         style="width:100%; aspect-ratio:1 / 1; background-image: url('img/Photobooth_RapmaDay__11__10_-removebg-preview.png'); background-size: cover; background-position: center; cursor:pointer;"
+         onclick="openModal()">
+    </div>
+  </div>
+</div>
+
+<!-- Modal overlay untuk video pop-up -->
+<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999; padding:20px;">
+  <!-- Konten modal -->
+  <div style="background:#fff; border-radius:8px; max-width:90%; width:100%; position:relative; aspect-ratio:16/9; display:flex; justify-content:center; align-items:center;">
+    <!-- Tombol tutup -->
+    <span style="position:absolute; top:10px; right:15px; background:#fff; border-radius:50%; padding:5px 10px; cursor:pointer; font-size:24px; font-weight:bold; box-shadow:0 2px 8px rgba(0,0,0,0.2);" onclick="closeModal()">&times;</span>
+    <!-- iframe video -->
+    <iframe id="popupVideo" style="width:100%; height:100%; border:none; border-radius:8px;" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    var modal = document.getElementById('videoModal');
+    var iframe = document.getElementById('popupVideo');
+    // URL embed video YouTube
+    iframe.src = "https://www.youtube.com/embed/ebTn7L9SdK4?autoplay=1";
+    modal.style.display = "flex";
+  }
+
+  function closeModal() {
+    var modal = document.getElementById('videoModal');
+    var iframe = document.getElementById('popupVideo');
+    iframe.src = "";
+    modal.style.display = "none";
+  }
+
+  // Optional: Tutup modal saat klik di luar konten
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Overlay untuk video -->
+    <div class="div-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:9999;">
+      <div class="div-video-container" style="position:relative; width:90%; max-width:800px;">
+        <iframe id="youtubeEmbed" width="100%" height="auto" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="div-close-btn" style="position:absolute; top:-10px; right:-10px; border:none; padding:5px 10px; cursor:pointer; font-weight:bold; border-radius:4px; background:#fff;">×</button>
+      </div>
+    </div>
+
+    <!-- Tambahkan bagian lainnya sesuai kebutuhan -->
+
+    <!-- Rangkaian Kegiatan Tahun Lalu -->
+    <div class="section-memories" id="memories" style="padding:20px;">
+      <h2>Capture your moment</h2>
+      <div class="memories-images" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+        <img src="img/tahunlalu (1).jpg" alt="Bassam" style="width:100%; max-width:200px; height:auto;">
+        <img src="img/tahunlalu (2).jpg" alt="Hindia" style="width:100%; max-width:200px; height:auto;">
+        <img src="img/tahunlalu (3).jpg" alt="Hindia" style="width:100%; max-width:200px; height:auto;">
+        <img src="img/tahunlalu (4).jpg" alt="Hindia" style="width:100%; max-width:200px; height:auto;">
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" style="color:#fff; padding:20px;">
+      <div class="footer-top" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+        <div class="footer-date-location" style="margin-bottom:10px;">
+          <div class="date-location">
+            <span class="location"></span>
+            <span class="city"></span>
+          </div>
+        </div>
+        <h1 class="slogan" style="margin-bottom:10px;">TUNE THE VIBES, FEEL THE RHYTHM</h1>
+        <div class="footer-links" style="margin-bottom:10px;">
+          <a href="https://wa.me/+6285643226163" target="_blank" rel="noopener noreferrer" style="margin:0 10px; color:#fff;">CONTACT US</a>
+          <a href="https://wa.me/+628985973591" target="_blank" rel="noopener noreferrer" style="margin:0 10px; color:#fff;">SPONSORSHIP</a>
+        </div>
+        <div class="social-icons" style="margin-bottom:10px;">
+          <a href="https://www.instagram.com/rapmafm?igsh=MTd2N3liMHBlN2ZzeA==" target="_blank" rel="noopener noreferrer" style="margin:0 5px; color:#fff;"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCDsAfuUjcWxydKzUF4QI0yg" target="_blank" rel="noopener noreferrer" style="margin:0 5px; color:#fff;"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/rapmafmums?t=aieFoVlvWc7F4vQ2EXeYGQ&s=09" target="_blank" rel="noopener noreferrer" style="margin:0 5px; color:#fff;"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@rapmafm?_t=ZS-8y4Hl1T55bs&_r=1" target="_blank" rel="noopener noreferrer" style="margin:0 5px; color:#fff;"><i class="fab fa-tiktok"></i></a>
+          <a href="https://open.spotify.com/show/3Gy8RYWni0Tsr0eF6zxfUB?si=SB6vClsER2Od1NjogxaSpw" target="_blank" rel="noopener noreferrer" style="margin:0 5px; color:#fff;"><i class="fab fa-spotify"></i></a>
+        </div>
+      </div>
+      <div class="footer-copy" style="text-align:center; margin-top:10px;">
+        <p>RAPMAFEST #12</p>
+        <p class="member-of">PRODUCED BY RAPMA FM</p>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<!-- Script untuk popup -->
+<script>
+  function showPopup(type) {
+    const overlay = document.getElementById('popupOverlay');
+    const contentDiv = document.getElementById('popupContent');
+
+    if (type === 'siar') {
+      contentDiv.innerHTML = `
+        <h4>Siar</h4>
+        <img src="img/webinar-removebg-preview.png" alt="Webinar Siar" style="width:100%; max-width:500px; margin-bottom:10px;">
+        <p>"Lomba Siar adalah kompetisi yang menguji kemampuan peserta dalam membawakan siaran secara menarik, komunikatif, dan interaktif, layaknya seorang penyiar radio profesional. Peserta ditantang untuk menampilkan keterampilan berbicara yang baik, penguasaan materi, intonasi suara, serta kemampuan menciptakan suasana yang nyaman dan menyenangkan bagi pendengar. Lomba ini bertujuan mengasah bakat komunikasi, public speaking, dan kreativitas dalam menyampaikan informasi atau hiburan secara langsung."</p>
+      `;
+    } else if (type === 'vo') {
+      contentDiv.innerHTML = `
+        <h4>VO</h4>
+        <img src="img/webinar-removebg-preview.png" alt="Webinar VO" style="width:100%; max-width:500px; margin-bottom:10px;">
+        <p>"Lomba Voice Over (VO) adalah kompetisi keterampilan dalam membawakan narasi atau naskah dengan menggunakan kekuatan suara. Peserta ditantang untuk menampilkan intonasi, artikulasi, penghayatan, serta ekspresi suara yang mampu menyampaikan pesan secara jelas, menarik, dan profesional. Lomba ini bertujuan mengasah kemampuan berbicara, membangun kepercayaan diri, serta mengenalkan dunia voice over sebagai profesi kreatif di industri media dan komunikasi."</p>
+      `;
+    }
+
+    overlay.style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+  }
+</script>
+
+<!-- Tambahan: Jangan lupa link script.js jika kalian punya file eksternal -->
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
